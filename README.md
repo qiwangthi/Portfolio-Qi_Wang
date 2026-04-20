@@ -23,12 +23,12 @@ Ein fertiges, responsives **UX/Design-Portfolio** gebaut mit React + TypeScript 
 
 ### Schritt 1 — Name & Persönliche Daten anpassen
 
-Öffne `src/i18n/translations.ts`. Ersetze alle `{Name}` Platzhalter durch den echten Namen des Studierenden.
+Öffne `src/i18n/translations.ts`. Der Standardname ist auf `Qi Wang` gesetzt.
 
 Wichtige Felder:
 ```
-name: '{Name}'            → z.B. 'Anna Müller'
-copyright: '© 2026 {Name}...'
+name: 'Qi Wang'
+copyright: '© 2026 Qi Wang...'
 ```
 
 ### Schritt 2 — Hochschule anpassen
@@ -44,7 +44,7 @@ In `src/data/projects.ts` sind Beispielprojekte (FinFlow, ShopScape, LearnHub, H
 
 1. Das `photoportfolio`-Projekt mit **eigenen Fotos** befüllen (Schritt 4)
 2. Die anderen Projekte entweder **anpassen** oder durch eigene Projekte **ersetzen**
-3. Alle `{Name}`-Platzhalter in Zitaten/Beschreibungen ersetzen
+3. Den Standardnamen bei Bedarf weiter anpassen
 
 ### Schritt 4 — Eigene Bilder hochladen
 
@@ -119,7 +119,7 @@ npm run dev
 
 | Platzhalter | Wo | Bedeutung |
 |---|---|---|
-| `{Name}` | `translations.ts`, `projects.ts` | Voller Name des Studierenden |
+| `Qi Wang` | `translations.ts`, `projects.ts` | Standardname im Template |
 | `{Hochschule}` | `projects.ts` | Name der Hochschule |
 | `picsum.photos/seed/...` | `projects.ts` | Alle Bild-URLs ersetzen |
 
