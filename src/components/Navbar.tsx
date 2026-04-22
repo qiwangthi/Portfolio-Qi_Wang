@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
+import { useTheme } from '../theme/ThemeContext';
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -60,18 +62,27 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <div className="lang-switch">
+          <div className="navbar__controls">
+            <div className="lang-switch">
+              <button
+                className={`lang-switch__btn${language === 'en' ? ' lang-switch__btn--active' : ''}`}
+                onClick={() => setLanguage('en')}
+              >
+                EN
+              </button>
+              <button
+                className={`lang-switch__btn${language === 'de' ? ' lang-switch__btn--active' : ''}`}
+                onClick={() => setLanguage('de')}
+              >
+                DE
+              </button>
+            </div>
             <button
-              className={`lang-switch__btn${language === 'en' ? ' lang-switch__btn--active' : ''}`}
-              onClick={() => setLanguage('en')}
+              className="theme-switch"
+              onClick={toggleTheme}
+              aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
             >
-              EN
-            </button>
-            <button
-              className={`lang-switch__btn${language === 'de' ? ' lang-switch__btn--active' : ''}`}
-              onClick={() => setLanguage('de')}
-            >
-              DE
+              <span aria-hidden="true">{theme === 'light' ? '🌙' : '☀️'}</span>
             </button>
           </div>
         </li>
