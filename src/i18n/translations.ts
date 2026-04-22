@@ -64,9 +64,9 @@ const en: Translations = {
   about: {
     sectionTitle: 'About Me',
     description: [
-      'I\'m a passionate UX Designer with a keen eye for detail and a deep understanding of user behavior. My design philosophy centers around empathy, research, and iterative thinking.',
-      'With experience across various industries, I bring a versatile skill set that combines strategic thinking with hands-on design execution. I believe great design is invisible — it just works.',
-      'When I\'m not designing, you\'ll find me exploring new design trends, attending UX meetups, or sketching ideas in my notebook.',
+      'I\'m a UX design student with a background in nursing, bringing years of clinical experience into the world of digital design. My time in healthcare shaped how I understand people—their needs, behaviors, and the importance of clarity in high-stakes environments. Today, I translate that perspective into user-centered design, creating intuitive and meaningful experiences.',
+      'I also work at the intersection of design and technology, using AI tools to enhance my creative process and build innovative AI-driven products. My approach combines empathy, critical thinking, and emerging technologies to design solutions that are not only functional, but genuinely impactful.',
+      
     ],
   },
   skills: {
