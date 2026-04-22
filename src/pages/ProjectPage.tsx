@@ -8,9 +8,20 @@ import { useEffect } from 'react';
 export default function ProjectPage() {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useLanguage();
-  const project = projects[language].find((p) => p.id === id);
-  const nextProject = project?.nextProject
-    ? projects[language].find((p) => p.id === project.nextProject)
+  const allProjects = projects[language];
+  const projectOrder = ['finflow', 'shopscape', 'learnhub'];
+  const orderMap = new Map(projectOrder.map((projectId, index) => [projectId, index]));
+  const orderedProjects = [...allProjects].sort((a, b) => {
+    if (a.id === 'photoportfolio') return 1;
+    if (b.id === 'photoportfolio') return -1;
+    const aOrder = orderMap.get(a.id) ?? Number.MAX_SAFE_INTEGER;
+    const bOrder = orderMap.get(b.id) ?? Number.MAX_SAFE_INTEGER;
+    return aOrder - bOrder;
+  });
+  const project = orderedProjects.find((p) => p.id === id);
+  const currentProjectIndex = project ? orderedProjects.findIndex((p) => p.id === project.id) : -1;
+  const nextProject = currentProjectIndex >= 0 && orderedProjects.length > 0
+    ? orderedProjects[(currentProjectIndex + 1) % orderedProjects.length]
     : null;
 
   useEffect(() => {

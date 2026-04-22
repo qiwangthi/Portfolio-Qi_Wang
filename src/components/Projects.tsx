@@ -7,22 +7,15 @@ export default function Projects() {
   const { language, t } = useLanguage();
   const [ref, isVisible] = useInView<HTMLElement>();
   const allProjects = projects[language];
-  const webAppProjects = allProjects.filter((project) =>
-    project.category.toLowerCase().includes('web app')
-  );
-  const remainingProjects = allProjects.filter(
-    (project) =>
-      !project.category.toLowerCase().includes('web app') &&
-      project.id !== 'photoportfolio'
-  );
-  const photographyProjects = allProjects.filter(
-    (project) => project.id === 'photoportfolio'
-  );
-  const projectList = [
-    ...webAppProjects,
-    ...remainingProjects,
-    ...photographyProjects,
-  ];
+  const projectOrder = ['finflow', 'shopscape', 'learnhub'];
+  const orderMap = new Map(projectOrder.map((id, index) => [id, index]));
+  const projectList = [...allProjects].sort((a, b) => {
+    if (a.id === 'photoportfolio') return 1;
+    if (b.id === 'photoportfolio') return -1;
+    const aOrder = orderMap.get(a.id) ?? Number.MAX_SAFE_INTEGER;
+    const bOrder = orderMap.get(b.id) ?? Number.MAX_SAFE_INTEGER;
+    return aOrder - bOrder;
+  });
 
   return (
     <section id="projects" className="section" ref={ref}>
