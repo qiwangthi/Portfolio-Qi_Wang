@@ -348,10 +348,26 @@ export default function ProjectPage() {
           <div className="project-detail__section">
             <h3>Gallery</h3>
             <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-secondary)' }}>Visual highlights from the project</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: project.id === 'maiq' ? 'repeat(2, minmax(0, 1fr))' : 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: '1.5rem',
+                marginTop: '1rem',
+              }}
+            >
               {project.gallery.map((img, i) => (
                 <div key={i} style={{ overflow: 'hidden', borderRadius: '12px' }}>
-                  <img src={img.src} alt={img.caption} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+                  <img
+                    src={img.src}
+                    alt={img.caption}
+                    style={{
+                      width: '100%',
+                      height: project.id === 'maiq' ? '420px' : '250px',
+                      objectFit: project.id === 'maiq' ? 'contain' : 'cover',
+                      backgroundColor: project.id === 'maiq' ? 'var(--color-bg-card)' : 'transparent',
+                    }}
+                  />
                   <p style={{ padding: '1rem', backgroundColor: 'var(--color-bg-card)', margin: 0 }}>{img.caption}</p>
                 </div>
               ))}

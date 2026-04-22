@@ -117,7 +117,7 @@ export const projects = {
       id: 'maiq',
       title: 'MAiQ 2.0 — AI-Powered Project Management Suite',
       category: 'Web App · AI · Project Management',
-      thumbnail: 'https://picsum.photos/seed/thumb-maiq/800/520',
+      thumbnail: 'https://ik.imagekit.io/nhh7dpdil/maiqMockup.png',
       color: '#4F7CFF',
       year: '2025',
       overview: 'A reimagined all-in-one workspace that combines AI chat, task management, meeting notes, and file handling into a single intuitive ecosystem for MAindTec GmbH.',
@@ -171,9 +171,9 @@ export const projects = {
         'The design showed that complex technical workflows can still feel intuitive',
       ],
       testimonial: {
-        quote: 'The interactive prototype became a compelling sales tool before the backend was even finished.',
-        author: 'MAindTec Team',
-        role: 'Internal Demo Use',
+        quote: 'Qi brings fresh perspectives, asks the right questions, and has already delivered strong initial designs that elevate our platform to the next level.',
+        author: 'Matthias Hartmann',
+        role: 'CEO of MAindTec GmbH',
       },
       learnings: [
         'AI works best as a design partner when it accelerates iteration instead of replacing structure',
@@ -181,9 +181,9 @@ export const projects = {
         'Contextual AI is most powerful when it lives exactly where the data already is',
       ],
       gallery: [
-        { src: 'https://picsum.photos/seed/maiq1/1200/700', caption: 'Overview dashboard with integrated AI interactions' },
-        { src: 'https://picsum.photos/seed/maiq2/1200/700', caption: 'Kanban board and AI-generated action items' },
-        { src: 'https://picsum.photos/seed/maiq3/1200/700', caption: 'Customizable workspace for project management and collaboration' },
+        { src: 'https://ik.imagekit.io/nhh7dpdil/Project-Notes.png', caption: 'Team notes and AI-generated insights' },
+        { src: 'https://ik.imagekit.io/nhh7dpdil/work-Task-Filter-Status.png', caption: ' with dragagable middle line to create more space for PM page' },
+
       ],
       nextProject: 'shopscape',
     },
@@ -525,7 +525,7 @@ export const projects = {
       id: 'maiq',
       title: 'MAiQ 2.0 – KI-gestützte Projektmanagement-Suite',
       category: 'Web App · KI · Projektmanagement',
-      thumbnail: 'https://picsum.photos/seed/thumb-maiq/800/520',
+      thumbnail: 'https://ik.imagekit.io/nhh7dpdil/maiqMockup.png',
       color: '#4F7CFF',
       year: '2025',
       overview: 'Ein neu konzipierter All-in-One-Workspace, der KI-Chat, Aufgabenverwaltung, Meeting-Notizen und Dateiverwaltung in einem einzigen intuitiven Ökosystem bündelt.',
@@ -579,9 +579,9 @@ export const projects = {
         'Das Design zeigte, dass komplexe Workflows trotzdem intuitiv sein können',
       ],
       testimonial: {
-        quote: 'Der interaktive Prototyp wurde zu einem überzeugenden Vertriebstool, noch bevor das Backend fertiggestellt war.',
-        author: 'MAindTec Team',
-        role: 'Interner Demo-Einsatz',
+        quote: 'Qi bringt frische Perspektiven, stellt die richtigen Fragen und hat bereits erste Designs geliefert, die unsere Plattform auf ein neues Level heben.',
+        author: 'Matthias Hartmann',
+        role: 'CEO of MAindTec GmbH',
       },
       learnings: [
         'KI ist als Designpartner am stärksten, wenn sie Iterationen beschleunigt statt Struktur zu ersetzen',
@@ -589,9 +589,8 @@ export const projects = {
         'Kontextbezogene KI ist besonders wirksam, wenn sie dort sitzt, wo die Daten ohnehin schon liegen',
       ],
       gallery: [
-        { src: 'https://picsum.photos/seed/maiq1/1200/700', caption: 'Dashboard mit integrierten KI-Interaktionen' },
-        { src: 'https://picsum.photos/seed/maiq2/1200/700', caption: 'Kanban-Board mit KI-generierten Action Items' },
-        { src: 'https://picsum.photos/seed/maiq3/1200/700', caption: 'Anpassbarer Workspace für Projektmanagement und Zusammenarbeit' },
+        { src: 'https://ik.imagekit.io/nhh7dpdil/Project-Notes.png', caption: 'Team-Notizen und KI-generierte Erkenntnisse' },
+        { src: 'https://ik.imagekit.io/nhh7dpdil/work-Task-Filter-Status.png', caption: 'Ansicht mit verschiebbarer Mittellinie für mehr Platz PM-Seite' },
       ],
       nextProject: 'shopscape',
     },
