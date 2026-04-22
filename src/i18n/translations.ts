@@ -93,14 +93,14 @@ const en: Translations = {
         icon: '📐',
       },
       {
-        title: 'Design Systems',
-        description: 'Building scalable, consistent component libraries and design tokens that accelerate team productivity.',
-        icon: '🧩',
+        title: 'Vibe Coding',
+        description: 'Translating designs into functional code intuitively. Using natural language and AI-assisted development tools to quickly generate frontend components and bridge the gap between design and development.',
+        icon: '💻',
       },
       {
-        title: 'Strategy & Workshop',
-        description: 'Facilitating design thinking workshops, stakeholder alignment sessions, and product strategy development.',
-        icon: '💡',
+        title: 'Technical Foundations',
+        description: 'Basic knowledge of HTML, CSS, JavaScript, and Java. Understanding underlying code structures helps me consider technical constraints during design, communicate effectively with development teams, and ensure my designs are feasible to implement.',
+        icon: '</>',
       },
       {
         title: 'Healthcare UX',
