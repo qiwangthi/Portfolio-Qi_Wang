@@ -94,12 +94,12 @@ const en: Translations = {
       },
       {
         title: 'Vibe Coding',
-        description: 'Translating designs into functional code intuitively. Using natural language and AI-assisted development tools to quickly generate frontend components and bridge the gap between design and development.',
+        description: 'Turning designs into working frontend code fast with AI-assisted workflows.',
         icon: '💻',
       },
       {
         title: 'Technical Foundations',
-        description: 'Basic knowledge of HTML, CSS, JavaScript, and Java. Understanding underlying code structures helps me consider technical constraints during design, communicate effectively with development teams, and ensure my designs are feasible to implement.',
+        description: 'Solid basics in HTML, CSS, JavaScript, and Java for developer-friendly design decisions.',
         icon: '</>',
       },
       {
@@ -191,12 +191,12 @@ const de: Translations = {
       },
       {
         title: 'Vibe Coding',
-        description: 'Designs intuitiv in funktionalen Code übersetzen. Nutzung von natürlicher Sprache und KI-gestützten Entwicklungstools, um schnell Frontend-Komponenten zu generieren und die Lücke zwischen Design und Entwicklung zu schließen.',
+        description: 'Designs schnell mit KI-gestuetzten Workflows in funktionalen Frontend-Code umsetzen.',
         icon: '💻',
       },
       {
         title: 'Technische Grundlagen',
-        description: 'Grundkenntnisse in HTML, CSS, JavaScript und Java. Das Verständnis der zugrundeliegenden Code-Strukturen ermöglicht es mir, technische Einschränkungen beim Design zu berücksichtigen, effektiv mit Entwickler-Teams zu kommunizieren und sicherzustellen, dass meine Designs technisch optimal umsetzbar sind.',
+        description: 'Solide Grundlagen in HTML, CSS, JavaScript und Java fuer umsetzbare, entwicklernahe Designs.',
         icon: '</>',
       },
       {
