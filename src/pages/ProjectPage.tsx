@@ -347,7 +347,9 @@ export default function ProjectPage() {
         {project.gallery && project.gallery.length > 0 && (
           <div className="project-detail__section">
             <h3>Gallery</h3>
-            <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-secondary)' }}>Visual highlights from the project</p>
+            <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-secondary)' }}>
+              {project.id === 'smart-coffee-machine' ? 'Interactive Figma prototype' : `Visual highlights from the project (${project.gallery.length} items)`}
+            </p>
             <div
               style={{
                 display: 'grid',
@@ -356,21 +358,56 @@ export default function ProjectPage() {
                 marginTop: '1rem',
               }}
             >
-              {project.gallery.map((img, i) => (
-                <div key={i} style={{ overflow: 'hidden', borderRadius: '12px' }}>
-                  <img
-                    src={img.src}
-                    alt={img.caption}
-                    style={{
-                      width: '100%',
-                      height: project.id === 'maiq' ? '420px' : '250px',
-                      objectFit: project.id === 'maiq' ? 'contain' : 'cover',
-                      backgroundColor: project.id === 'maiq' ? 'var(--color-bg-card)' : 'transparent',
-                    }}
-                  />
-                  <p style={{ padding: '1rem', backgroundColor: 'var(--color-bg-card)', margin: 0 }}>{img.caption}</p>
-                </div>
-              ))}
+              {project.gallery && project.gallery.map((img, i) => {
+                // Smart Coffee Machine: last item is embedded Figma iframe
+                if (project.id === 'smart-coffee-machine' && i === project.gallery.length - 1 && (img as any).iframeUrl) {
+                  return (
+                    <div key={i} style={{ gridColumn: '1 / -1', overflow: 'hidden', borderRadius: '12px', backgroundColor: 'var(--color-bg-card)', minHeight: '1000px' }}>
+                      <iframe
+                        src={(img as any).iframeUrl}
+                        style={{
+                          width: '100%',
+                          height: '1000px',
+                          border: 'none',
+                          borderRadius: '12px',
+                          display: 'block',
+                        }}
+                        title={img.caption}
+                        allowFullScreen
+                        allow="fullscreen"
+                        loading="lazy"
+                      />
+                    </div>
+                  );
+                }
+                // Regular image gallery items
+                const imageSrc = (img as any).src;
+                return (
+                  <div key={i} style={{ overflow: 'hidden', borderRadius: '12px', backgroundColor: 'var(--color-bg-card)', minHeight: '250px' }}>
+                    {imageSrc ? (
+                      <>
+                        <img
+                          src={imageSrc}
+                          alt={img.caption}
+                          style={{
+                            width: '100%',
+                            height: project.id === 'maiq' ? '420px' : '250px',
+                            objectFit: project.id === 'maiq' ? 'contain' : 'cover',
+                            backgroundColor: project.id === 'maiq' ? 'var(--color-bg-card)' : 'var(--color-bg)',
+                            display: 'block',
+                          }}
+                          loading="lazy"
+                        />
+                      </>
+                    ) : (
+                      <div style={{ width: '100%', height: '250px', backgroundColor: 'var(--color-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <p style={{ color: 'var(--color-text-secondary)' }}>Image unavailable</p>
+                      </div>
+                    )}
+                    <p style={{ padding: '1rem', backgroundColor: 'var(--color-bg-card)', margin: 0, fontSize: '0.9rem' }}>{img.caption}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
