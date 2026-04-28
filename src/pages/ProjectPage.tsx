@@ -359,8 +359,8 @@ export default function ProjectPage() {
               }}
             >
               {project.gallery && project.gallery.map((img, i) => {
-                // Smart Coffee Machine: last item is embedded Figma iframe
-                if (project.id === 'smart-coffee-machine' && i === project.gallery.length - 1 && (img as any).iframeUrl) {
+                // Handle embedded iframes (Figma, YouTube, etc.) - no caption
+                if ((img as any).iframeUrl) {
                   return (
                     <div
                       key={i}
@@ -370,9 +370,7 @@ export default function ProjectPage() {
                         borderRadius: '12px',
                         backgroundColor: 'var(--color-bg-card)',
                         width: '100%',
-                        maxWidth: '1024px',
                         height: '616px',
-                        margin: '0 auto',
                       }}
                     >
                       <iframe
