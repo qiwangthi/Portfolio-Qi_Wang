@@ -362,12 +362,24 @@ export default function ProjectPage() {
                 // Smart Coffee Machine: last item is embedded Figma iframe
                 if (project.id === 'smart-coffee-machine' && i === project.gallery.length - 1 && (img as any).iframeUrl) {
                   return (
-                    <div key={i} style={{ gridColumn: '1 / -1', overflow: 'hidden', borderRadius: '12px', backgroundColor: 'var(--color-bg-card)', minHeight: '1000px' }}>
+                    <div
+                      key={i}
+                      style={{
+                        gridColumn: '1 / -1',
+                        overflow: 'hidden',
+                        borderRadius: '12px',
+                        backgroundColor: 'var(--color-bg-card)',
+                        width: '100%',
+                        maxWidth: '1024px',
+                        height: '616px',
+                        margin: '0 auto',
+                      }}
+                    >
                       <iframe
                         src={(img as any).iframeUrl}
                         style={{
                           width: '100%',
-                          height: '1000px',
+                          height: '100%',
                           border: 'none',
                           borderRadius: '12px',
                           display: 'block',
