@@ -248,7 +248,7 @@ export default function ProjectPage() {
         </div>
 
         {/* Challenge Section */}
-        {project.challenge && (
+        {project.id !== 'roll-a-snowball' && project.challenge && (
           <div className="project-detail__section">
             <h3>Challenge</h3>
             <p>{project.challenge}</p>
@@ -263,7 +263,7 @@ export default function ProjectPage() {
         )}
 
         {/* Solution Section */}
-        {project.solution && (
+        {project.id !== 'roll-a-snowball' && project.solution && (
           <div className="project-detail__section">
             <h3>Solution</h3>
             <p>{project.solution}</p>
@@ -274,6 +274,18 @@ export default function ProjectPage() {
                 ))}
               </ul>
             )}
+          </div>
+        )}
+
+        {/* Play Hinweise Section */}
+        {project.id === 'roll-a-snowball' && (project as any).hinweise && (project as any).hinweise.length > 0 && (
+          <div className="project-detail__section">
+            <h3>Play hinweise</h3>
+            <ul style={{ marginTop: '1rem' }}>
+              {(project as any).hinweise.map((hint: string, i: number) => (
+                <li key={i} style={{ marginBottom: '0.5rem' }}>{hint}</li>
+              ))}
+            </ul>
           </div>
         )}
 
@@ -361,6 +373,7 @@ export default function ProjectPage() {
               {project.gallery && project.gallery.map((img, i) => {
                 // Handle embedded iframes (Figma, YouTube, etc.) - no caption
                 if ((img as any).iframeUrl) {
+                  const iframeHeight = (img as any).iframeHeight ?? 616;
                   return (
                     <div
                       key={i}
@@ -370,7 +383,7 @@ export default function ProjectPage() {
                         borderRadius: '12px',
                         backgroundColor: 'var(--color-bg-card)',
                         width: '100%',
-                        height: '616px',
+                        height: iframeHeight,
                       }}
                     >
                       <iframe
