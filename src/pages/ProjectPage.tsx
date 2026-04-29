@@ -353,7 +353,7 @@ export default function ProjectPage() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: project.id === 'maiq' ? 'repeat(2, minmax(0, 1fr))' : 'repeat(auto-fit, minmax(300px, 1fr))',
+                gridTemplateColumns: project.id === 'maiq' || project.id === 'thi-printer-redesign' ? 'repeat(2, minmax(0, 1fr))' : 'repeat(auto-fit, minmax(300px, 1fr))',
                 gap: '1.5rem',
                 marginTop: '1rem',
               }}
@@ -393,7 +393,7 @@ export default function ProjectPage() {
                 // Regular image gallery items
                 const imageSrc = (img as any).src;
                 return (
-                  <div key={i} style={{ overflow: 'hidden', borderRadius: '12px', backgroundColor: 'var(--color-bg-card)', minHeight: '250px' }}>
+                  <div key={i} style={{ overflow: 'hidden', borderRadius: '12px', backgroundColor: 'var(--color-bg-card)', minHeight: project.id === 'thi-printer-redesign' ? '360px' : '250px' }}>
                     {imageSrc ? (
                       <>
                         <img
@@ -401,16 +401,16 @@ export default function ProjectPage() {
                           alt={img.caption}
                           style={{
                             width: '100%',
-                            height: project.id === 'maiq' ? '420px' : '250px',
-                            objectFit: project.id === 'maiq' ? 'contain' : 'cover',
-                            backgroundColor: project.id === 'maiq' ? 'var(--color-bg-card)' : 'var(--color-bg)',
+                            height: project.id === 'maiq' ? '420px' : project.id === 'thi-printer-redesign' ? '360px' : '250px',
+                            objectFit: project.id === 'maiq' || project.id === 'thi-printer-redesign' ? 'contain' : 'cover',
+                            backgroundColor: project.id === 'maiq' || project.id === 'thi-printer-redesign' ? 'var(--color-bg-card)' : 'var(--color-bg)',
                             display: 'block',
                           }}
                           loading="lazy"
                         />
                       </>
                     ) : (
-                      <div style={{ width: '100%', height: '250px', backgroundColor: 'var(--color-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <div style={{ width: '100%', height: project.id === 'thi-printer-redesign' ? '360px' : '250px', backgroundColor: 'var(--color-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <p style={{ color: 'var(--color-text-secondary)' }}>Image unavailable</p>
                       </div>
                     )}
