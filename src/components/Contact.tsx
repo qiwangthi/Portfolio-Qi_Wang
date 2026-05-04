@@ -15,7 +15,7 @@ export default function Contact() {
           ✉ {t.contact.email}
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/qi-wang-051159321/"
           target="_blank"
           rel="noopener noreferrer"
           className="contact__btn contact__btn--secondary"
