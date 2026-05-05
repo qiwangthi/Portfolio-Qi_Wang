@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import { useInView } from '../hooks/useInView';
-import { projects } from '../data/projects';
+import { projectDisplayOrder, projects } from '../data/projects';
 
 export default function Projects() {
   const { language, t } = useLanguage();
   const [ref, isVisible] = useInView<HTMLElement>();
   const allProjects = projects[language];
-  const projectOrder = ['maiq', 'smart-coffee-machine', 'memcare'];
-  const orderMap = new Map(projectOrder.map((id, index) => [id, index]));
+  const orderMap = new Map(projectDisplayOrder.map((id, index) => [id, index]));
   const projectList = [...allProjects].sort((a, b) => {
-    if (a.id === 'photoportfolio') return 1;
-    if (b.id === 'photoportfolio') return -1;
     const aOrder = orderMap.get(a.id) ?? Number.MAX_SAFE_INTEGER;
     const bOrder = orderMap.get(b.id) ?? Number.MAX_SAFE_INTEGER;
     return aOrder - bOrder;

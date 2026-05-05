@@ -54,6 +54,15 @@ export interface ProjectData {
   hinweise?: string[];
 }
 
+export const projectDisplayOrder = [
+  'maiq',
+  'smart-coffee-machine',
+  'thi-printer-redesign',
+  'memcare',
+  'roll-a-snowball',
+  'photoportfolio',
+];
+
 export const projects: Record<Language, ProjectData[]> = {
   en: [
     {

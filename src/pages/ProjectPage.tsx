@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
-import { projects } from '../data/projects';
+import { projectDisplayOrder, projects } from '../data/projects';
 import Footer from '../components/Footer';
 import MasonryGallery from '../components/MasonryGallery';
 import { useEffect } from 'react';
@@ -9,11 +9,8 @@ export default function ProjectPage() {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useLanguage();
   const allProjects = projects[language];
-  const projectOrder = ['maiq', 'smart-coffee-machine', 'learnhub'];
-  const orderMap = new Map(projectOrder.map((projectId, index) => [projectId, index]));
+  const orderMap = new Map(projectDisplayOrder.map((projectId, index) => [projectId, index]));
   const orderedProjects = [...allProjects].sort((a, b) => {
-    if (a.id === 'photoportfolio') return 1;
-    if (b.id === 'photoportfolio') return -1;
     const aOrder = orderMap.get(a.id) ?? Number.MAX_SAFE_INTEGER;
     const bOrder = orderMap.get(b.id) ?? Number.MAX_SAFE_INTEGER;
     return aOrder - bOrder;
