@@ -25,7 +25,7 @@ const resumeContent = {
                 role: 'UX Design Intern',
                 company: 'MAindTec GmbH, Ingolstadt',
                 period: 'Internship',
-                project: 'Reimagined the MAiQ 2.0 platform',
+                project: 'Project: MAiQ 2.0 platform',
                 bullets: [
                     'Created low- and high-fidelity wireframes for new workflows and interface ideas.',
                     'Developed interactive prototypes for user testing and iteration.',

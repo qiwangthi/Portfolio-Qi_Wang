@@ -77,25 +77,25 @@ export const projects: Record<Language, ProjectData[]> = {
       tools: ['Nikon D810', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio Website'],
       gallery: [],
       galleryWithCategories: {
-        categories: ['natrue Photograhy', 'City Photograhy', 'Other Photograhy'],
+        categories: ['Nature Photography', 'City Photography', 'Other Photography'],
         images: [
           // NATURE PHOTOGRAPHY
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/598087E8-21BE-4694-AF9D-456487F89F43_1_201_a.jpeg?updatedAt=1777962192334', caption: 'Mountain landscape with sheeps', category: 'natrue Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/1AD58839-81E4-4625-BB8A-FAC5FB25731F.jpeg?updatedAt=1777962192834', caption: 'Horse an the river', category: 'natrue Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8911.jpg?updatedAt=1777962191059', caption: 'golden plants on fields', category: 'natrue Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8915.JPG?updatedAt=1777962190611', caption: 'river view', category: 'natrue Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/F60001E8-EF0D-4D36-B834-3CE056920F0A_1_201_a.jpeg?updatedAt=1777962190166', caption: 'Reflection in the lake', category: 'natrue Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8923.JPG?updatedAt=1777962189571', caption: 'Apple tree in summer', category: 'natrue Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/BBGL2118.JPG?updatedAt=1777962187817', caption: 'winter landscape', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/598087E8-21BE-4694-AF9D-456487F89F43_1_201_a.jpeg?updatedAt=1777962192334', caption: 'Mountain landscape with sheep', category: 'Nature Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/1AD58839-81E4-4625-BB8A-FAC5FB25731F.jpeg?updatedAt=1777962192834', caption: 'Horse by the river', category: 'Nature Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8911.jpg?updatedAt=1777962191059', caption: 'Golden plants in the fields', category: 'Nature Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8915.JPG?updatedAt=1777962190611', caption: 'River view', category: 'Nature Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/F60001E8-EF0D-4D36-B834-3CE056920F0A_1_201_a.jpeg?updatedAt=1777962190166', caption: 'Reflection in the lake', category: 'Nature Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8923.JPG?updatedAt=1777962189571', caption: 'Apple tree in summer', category: 'Nature Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/BBGL2118.JPG?updatedAt=1777962187817', caption: 'Winter landscape', category: 'Nature Photography' },
 
           // CITY PHOTOGRAPHY
-          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/08EA4E16-5854-4872-817A-087654722C0E.jpeg?updatedAt=1777962139766', caption: 'light in Mueseum', category: 'City Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/FKDS0994.JPG?updatedAt=1777962138357', caption: 'Munich street', category: 'City Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/IMG_5409.JPG?updatedAt=1777962138312', caption: 'Beach in Barcelona ', category: 'City Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/08EA4E16-5854-4872-817A-087654722C0E.jpeg?updatedAt=1777962139766', caption: 'Light in museum', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/FKDS0994.JPG?updatedAt=1777962138357', caption: 'Munich street', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/IMG_5409.JPG?updatedAt=1777962138312', caption: 'Beach in Barcelona', category: 'City Photography' },
           // OTHER PHOTOGRAPHY
-          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/19F20596-4900-483F-A4A9-BD448119ECBE_1_105_c.jpeg?updatedAt=1777962132743', caption: 'Design chair ', category: 'Other Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/3FE0850F-38E7-4306-83AA-C026CDA7AEC3.jpeg?updatedAt=1777962131896', caption: 'Fullmoon', category: 'Other Photograhy' },
-          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/_DSC9284.JPG?updatedAt=1777962138147', caption: 'self-drawn cup and shoppingbag ', category: 'Other Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/19F20596-4900-483F-A4A9-BD448119ECBE_1_105_c.jpeg?updatedAt=1777962132743', caption: 'Design chair', category: 'Other Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/3FE0850F-38E7-4306-83AA-C026CDA7AEC3.jpeg?updatedAt=1777962131896', caption: 'Full moon', category: 'Other Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/_DSC9284.JPG?updatedAt=1777962138147', caption: 'Self-drawn cup and shopping bag', category: 'Other Photography' },
 
         ],
       },
