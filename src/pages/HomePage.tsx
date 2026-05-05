@@ -1,5 +1,4 @@
 import Hero from '../components/Hero';
-import TrustBanner from '../components/TrustBanner';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
@@ -10,7 +9,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustBanner />
       <About />
       <Skills />
       <Projects />
