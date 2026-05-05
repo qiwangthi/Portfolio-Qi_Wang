@@ -158,7 +158,7 @@ const de: Translations = {
     greeting: 'Hallo, ich bin',
     name: 'Qi Wang',
     title: 'UX Designerin',
-    subtitle: 'bridging healthcare empathy with AI-driven product thinking.',
+    subtitle: 'Healthcare-Empathie mit KI-gestütztem Produktdenken verbinden.',
     cta: 'Meine Arbeiten ansehen',
   },
   about: {

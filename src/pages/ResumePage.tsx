@@ -5,11 +5,11 @@ import { useLanguage } from '../i18n/LanguageContext';
 const resumeContent = {
     en: {
         title: 'Resume',
-        subtitle: 'One-page overview of my profile, experience, education, and skills.',
+        subtitle: 'looking for a ux student job and later a bachlor thesis opportunity in the field of ux / ui design.',
         download: 'Download PDF',
         back: 'Back to Home',
         profileTitle: 'Profile',
-        profile: 'UX design student with a nursing background, combining empathy, research, and AI-assisted product thinking. Currently looking for a Werkstudent role in UX / UI design.',
+        profile: 'UX design student at TH Ingolstadt with a strong background in medicine (LMU Klinikum). I combine empathy and deep user understanding from my many years of nursing experience with modern design methodologies. My focus is on designing intuitive digital experiences that address real human needs.',
         contactTitle: 'Contact',
         experienceTitle: 'Work Experience',
         educationTitle: 'Education',
@@ -60,7 +60,7 @@ const resumeContent = {
         ],
         tools: [
             'Figma',
-            'Adobe Illustrator',
+            'Illustrator',
             'Photoshop',
             'Lightroom',
             'InDesign',
@@ -89,7 +89,7 @@ const resumeContent = {
         download: 'PDF herunterladen',
         back: 'Zurück zur Startseite',
         profileTitle: 'Profil',
-        profile: 'UX Design Studentin mit Pflegehintergrund, die Empathie, Forschung und KI-gestütztes Produktdenken verbindet. Aktuell auf der Suche nach einer Werkstudententätigkeit im Bereich UX / UI Design.',
+        profile: 'UX-Design-Studentin an der TH Ingolstadt mit fundiertem Hintergrund in der Medizin (LMU Klinikum). Ich verbinde Empathie und tiefes Nutzerverständnis aus meiner langjährigen Erfahrung in der Pflege mit modernen Design-Methoden. Mein Fokus liegt auf der Gestaltung intuitiver digitaler Erlebnisse, die echte menschliche Bedürfnisse adressieren.',
         contactTitle: 'Kontakt',
         experienceTitle: 'Berufserfahrung',
         educationTitle: 'Bildung',
@@ -140,7 +140,7 @@ const resumeContent = {
         ],
         tools: [
             'Figma',
-            'Adobe Illustrator',
+            'Illustrator',
             'Photoshop',
             'Lightroom',
             'InDesign',
@@ -167,7 +167,7 @@ const resumeContent = {
 
 const designToolIcons = [
     { label: 'Figma', icon: 'F' },
-    { label: 'Adobe Illustrator', icon: 'Ai' },
+    { label: 'Illustrator', icon: 'Ai' },
     { label: 'Photoshop', icon: 'Ps' },
     { label: 'Lightroom', icon: 'Lr' },
     { label: 'InDesign', icon: 'Id' },
@@ -194,7 +194,15 @@ export default function ResumePage() {
     }, [content.title]);
 
     const handleDownload = () => {
-        window.print();
+        const pdfUrl = 'https://ik.imagekit.io/nhh7dpdil/Qi_Wang.pdf';
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'Qi_Wang.pdf';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -213,7 +221,7 @@ export default function ResumePage() {
                     <header className="resume-page__header">
                         <img
                             className="resume-page__photo"
-                            src="https://ik.imagekit.io/nhh7dpdil/meWithCam.jpg"
+                            src="https://ik.imagekit.io/nhh7dpdil/profilohne.png?updatedAt=1776677244148"
                             alt="Qi Wang portrait"
                         />
                         <div className="resume-page__hero-copy">
