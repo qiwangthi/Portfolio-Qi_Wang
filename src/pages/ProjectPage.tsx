@@ -277,7 +277,7 @@ export default function ProjectPage() {
         {/* Play Hinweise Section */}
         {project.id === 'roll-a-snowball' && (project as any).hinweise && (project as any).hinweise.length > 0 && (
           <div className="project-detail__section">
-            <h3>Play hinweise</h3>
+            <h3>{language === 'en' ? 'Play hints' : 'Play Hinweise'}</h3>
             <ul style={{ marginTop: '1rem' }}>
               {(project as any).hinweise.map((hint: string, i: number) => (
                 <li key={i} style={{ marginBottom: '0.5rem' }}>{hint}</li>

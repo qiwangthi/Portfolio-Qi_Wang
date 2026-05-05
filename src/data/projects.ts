@@ -426,6 +426,8 @@ export const projects: Record<Language, ProjectData[]> = {
       challenge: 'Design and implement a rolling-snowball mechanic with engaging level design and polish under a student project timeline.',
       solution: 'A lightweight Unity game focused on intuitive rolling controls, progressive difficulty, and visual feedback to engage players.',
       hinweise: [
+        'Click "Start"',
+        'One click in the scene',
         'W = Up',
         'S = Down',
         'A = Left',
@@ -793,10 +795,12 @@ export const projects: Record<Language, ProjectData[]> = {
       challenge: 'Entwurf einer Rollmechanik und Levelgestaltung innerhalb eines Studentenprojekt-Zeitrahmens.',
       solution: 'Leichtes Unity-Spiel mit intuitiver Steuerung, progressivem Schwierigkeitsaufbau und optischem Feedback.',
       hinweise: [
-        'W = Up',
-        'S = Down',
-        'A = Left',
-        'D = Right',
+        'Klick auf "Start"',
+        'Ein Klick in die Szene',
+        'W = Hoch',
+        'S = Runter',
+        'A = Links',
+        'D = Rechts',
       ],
       gallery: [
         { iframeUrl: 'https://play.unity.com/en/games/afb41dc2-58f2-40c1-bcd0-1e39d93e9bf1/roll-a-snowball', caption: 'Spiel Roll-a-snowball spielen', iframeHeight: 800 },
