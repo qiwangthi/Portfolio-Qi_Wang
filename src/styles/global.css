@@ -1462,7 +1462,7 @@ img {
   margin-bottom: 0.85rem;
 }
 
-.resume-page__entry + .resume-page__entry {
+.resume-page__entry+.resume-page__entry {
   margin-top: 1rem;
 }
 
@@ -1603,6 +1603,7 @@ img {
 }
 
 @media print {
+
   .navbar,
   .cursor-glow,
   .no-print,
