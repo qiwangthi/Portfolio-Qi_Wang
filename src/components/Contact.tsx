@@ -12,7 +12,7 @@ export default function Contact() {
           href="mailto:wangqimunich@gmail.com"
           className="contact__btn contact__btn--primary"
         >
-          ✉ {t.contact.email}
+          {t.contact.email}
         </a>
         <a
           href="https://www.linkedin.com/in/qi-wang-051159321/"
@@ -20,7 +20,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="contact__btn contact__btn--secondary"
         >
-          🔗 {t.contact.linkedin}
+          {t.contact.linkedin}
         </a>
       </div>
     </section>

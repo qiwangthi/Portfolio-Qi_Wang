@@ -74,6 +74,8 @@ export const projects: Record<Language, ProjectData[]> = {
       year: '2026',
       overview: 'A personal photography portfolio focused on my hobby of working with light, proportion, composition, and visual storytelling across different photographic scenes.',
       role: 'Photographer',
+      duration: 'Life long',
+      client: 'Me',
       tools: ['Nikon D810', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio Website'],
       gallery: [],
       galleryWithCategories: {
@@ -92,6 +94,18 @@ export const projects: Record<Language, ProjectData[]> = {
           { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/08EA4E16-5854-4872-817A-087654722C0E.jpeg?updatedAt=1777962139766', caption: 'Light in museum', category: 'City Photography' },
           { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/FKDS0994.JPG?updatedAt=1777962138357', caption: 'Munich street', category: 'City Photography' },
           { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/IMG_5409.JPG?updatedAt=1777962138312', caption: 'Beach in Barcelona', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/A2C6DB90-130E-4061-8F32-34D48D2E76FA_1_201_a.jpeg?updatedAt=1777962138923', caption: 'Beach in Barcelona', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/3C162BAC-9B77-4780-86C8-6957108741BF_1_201_a.jpg?updatedAt=1777962137538', caption: 'window ', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/OYXM9411.JPG?updatedAt=1777962134106', caption: 'Hunters ', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/YHCC0193.JPG?updatedAt=1777962133203', caption: 'light in the train station ', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/LKMP2804.JPG?updatedAt=1777962133004', caption: 'Mid age festival ', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/OMDK3534.JPG?updatedAt=1777962132759', caption: 'women with horses ', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/CAA71C4F-A779-47B9-92E6-B12D1D968D59_1_105_c.jpeg?updatedAt=1777962132099', caption: 'Concert in Denmark ', category: 'City Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/928D8213-2B53-4A91-80A0-656835165878_1_105_c.jpeg?updatedAt=1777962131704', caption: 'Concert in Denmark ', category: 'City Photography' },
+
+
+
+
           // OTHER PHOTOGRAPHY
           { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/19F20596-4900-483F-A4A9-BD448119ECBE_1_105_c.jpeg?updatedAt=1777962132743', caption: 'Design chair', category: 'Other Photography' },
           { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/3FE0850F-38E7-4306-83AA-C026CDA7AEC3.jpeg?updatedAt=1777962131896', caption: 'Full moon', category: 'Other Photography' },
@@ -415,6 +429,8 @@ export const projects: Record<Language, ProjectData[]> = {
       year: '2026',
       overview: 'Ein persönliches Fotografie-Portfolio, das meine Freude an Licht, Proportion, Komposition und visuellem Storytelling in unterschiedlichen fotografischen Szenen zeigt.',
       role: 'Fotograf',
+      duration: 'Lebenslang',
+      client: 'Ich',
       tools: ['Nikon D810', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio-Website'],
       gallery: [],
       galleryWithCategories: {
