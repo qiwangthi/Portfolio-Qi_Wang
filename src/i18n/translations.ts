@@ -76,7 +76,7 @@ const en: Translations = {
     items: [
       {
         title: 'UX Research',
-        description: 'User interviews, surveys, usability testing, persona development, and journey mapping to uncover deep user insights.',
+        description: 'User interviews, self-generated surveys, and UX evaluation forms (UEQ, SUS, NASA-TLX, and heuristic evaluation) for structured usability testing and insights.',
         icon: '🔍',
       },
       {
@@ -115,8 +115,8 @@ const en: Translations = {
         icon: '🤖',
       },
       {
-        title: 'Service Blueprinting',
-        description: 'Mapping end-to-end touchpoints across digital and offline channels to align teams and improve the full user journey.',
+        title: 'Promo Video',
+        description: 'Creating promo videos with Adobe After Effects to present product stories clearly and make concepts more engaging.',
         icon: '🗺️',
       },
     ],
@@ -174,7 +174,7 @@ const de: Translations = {
     items: [
       {
         title: 'UX Research',
-        description: 'Nutzerinterviews, Umfragen, Usability-Tests, Persona-Entwicklung und Journey Mapping für tiefe Nutzereinblicke.',
+        description: 'Nutzerinterviews, selbst erstellte Umfragen und UX-Evaluationsformulare (UEQ, SUS, NASA-TLX und heuristische Evaluation) für strukturierte Usability-Tests und fundierte Erkenntnisse.',
         icon: '🔍',
       },
       {
@@ -213,8 +213,8 @@ const de: Translations = {
         icon: '🤖',
       },
       {
-        title: 'Service Blueprinting',
-        description: 'Abbildung von End-to-End Touchpoints ueber digitale und analoge Kanaele, um Teams auszurichten und die gesamte Journey zu verbessern.',
+        title: 'Promo Video',
+        description: 'Erstellung von Promo-Videos mit Adobe After Effects, um Produktstories klar zu vermitteln und Konzepte lebendiger zu praesentieren.',
         icon: '🗺️',
       },
     ],

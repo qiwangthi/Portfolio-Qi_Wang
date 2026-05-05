@@ -460,7 +460,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .hero__actions> :first-child,
 .hero__actions> :nth-child(2) {
   /* buttons row - handled by wrapper */
