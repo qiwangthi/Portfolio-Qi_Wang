@@ -62,6 +62,11 @@ export default function Navbar() {
           </a>
         </li>
         <li>
+          <Link to="/resume" onClick={() => setMenuOpen(false)}>
+            {t.nav.resume}
+          </Link>
+        </li>
+        <li>
           <div className="navbar__controls">
             <div className="lang-switch">
               <button

@@ -3,6 +3,7 @@ export type Language = 'en' | 'de';
 export interface Translations {
   nav: {
     home: string;
+    resume: string;
     projects: string;
     about: string;
     contact: string;
@@ -50,6 +51,7 @@ export interface Translations {
 const en: Translations = {
   nav: {
     home: 'Home',
+    resume: 'Resume',
     projects: 'Projects',
     about: 'About',
     contact: 'Contact',
@@ -147,6 +149,7 @@ const en: Translations = {
 const de: Translations = {
   nav: {
     home: 'Start',
+    resume: 'Lebenslauf',
     projects: 'Projekte',
     about: 'Über mich',
     contact: 'Kontakt',

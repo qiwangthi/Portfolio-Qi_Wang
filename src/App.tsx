@@ -4,6 +4,7 @@ import { ThemeProvider } from './theme/ThemeContext';
 import Navbar from './components/Navbar';
 import CursorGlow from './components/CursorGlow';
 import HomePage from './pages/HomePage';
+import ResumePage from './pages/ResumePage';
 import ProjectPage from './pages/ProjectPage';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/resume" element={<ResumePage />} />
             <Route path="/project/finflow" element={<Navigate to="/project/maiq" replace />} />
             <Route path="/project/:id" element={<ProjectPage />} />
           </Routes>
