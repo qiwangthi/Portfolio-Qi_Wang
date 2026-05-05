@@ -460,6 +460,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .hero__actions> :first-child,
 .hero__actions> :nth-child(2) {
   /* buttons row - handled by wrapper */
@@ -784,6 +785,73 @@ img {
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.skill-card__icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card__icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  outline: none;
+}
+
+.skill-card__icon-wrap::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(2px);
+  white-space: nowrap;
+  background: rgba(10, 10, 15, 0.96);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.08s ease, transform 0.08s ease;
+  z-index: 3;
+}
+
+.skill-card__icon-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 3px);
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(10, 10, 15, 0.96);
+  opacity: 0;
+  transition: opacity 0.08s ease;
+  z-index: 3;
+}
+
+.skill-card__icon-wrap:hover::after,
+.skill-card__icon-wrap:hover::before,
+.skill-card__icon-wrap:focus-visible::after,
+.skill-card__icon-wrap:focus-visible::before {
+  opacity: 1;
+}
+
+.skill-card__icon-wrap:hover::after,
+.skill-card__icon-wrap:focus-visible::after {
+  transform: translateX(-50%) translateY(0);
+}
+
+.skill-card__icon-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
 }
 
 .skill-card__desc {

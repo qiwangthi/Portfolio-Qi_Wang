@@ -105,8 +105,8 @@ const en: Translations = {
         icon: '</>',
       },
       {
-        title: 'Healthcare UX',
-        description: 'Designing patient- and clinician-focused journeys that prioritize clarity, trust, and safety in sensitive healthcare contexts.',
+        title: 'Photography',
+        description: 'Photography, photo editing, and visual storytelling with Adobe Photoshop, Lightroom, and InDesign.',
         icon: '🏥',
       },
       {
@@ -203,8 +203,8 @@ const de: Translations = {
         icon: '</>',
       },
       {
-        title: 'Healthcare UX',
-        description: 'Gestaltung von patienten- und klinikzentrierten Journeys mit Fokus auf Klarheit, Vertrauen und Sicherheit in sensiblen Gesundheitskontexten.',
+        title: 'Fotografie',
+        description: 'Fotografie, Bildbearbeitung und visuelles Storytelling mit Adobe Photoshop, Lightroom und InDesign.',
         icon: '🏥',
       },
       {
