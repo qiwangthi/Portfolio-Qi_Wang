@@ -13,9 +13,28 @@ interface MasonryGalleryProps {
 
 export default function MasonryGallery({ images, categories }: MasonryGalleryProps) {
   const [activeTab, setActiveTab] = useState(categories[0] || '');
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const filteredImages = images.filter((img) => img.category === activeTab);
+  const selectedImage = selectedIndex !== null ? filteredImages[selectedIndex] ?? null : null;
+
+  function openImage(index: number) {
+    setSelectedIndex(index);
+  }
+
+  function showNextImage() {
+    if (filteredImages.length === 0) {
+      return;
+    }
+
+    setSelectedIndex((currentIndex) => {
+      if (currentIndex === null) {
+        return 0;
+      }
+
+      return (currentIndex + 1) % filteredImages.length;
+    });
+  }
 
   return (
     <div className="masonry-gallery">
@@ -25,7 +44,10 @@ export default function MasonryGallery({ images, categories }: MasonryGalleryPro
           <button
             key={cat}
             className={`masonry-gallery__tab${cat === activeTab ? ' masonry-gallery__tab--active' : ''}`}
-            onClick={() => setActiveTab(cat)}
+            onClick={() => {
+              setActiveTab(cat);
+              setSelectedIndex(null);
+            }}
           >
             {cat}
           </button>
@@ -38,7 +60,7 @@ export default function MasonryGallery({ images, categories }: MasonryGalleryPro
           <div
             key={i}
             className="masonry-gallery__item"
-            onClick={() => setSelectedImage(img)}
+            onClick={() => openImage(i)}
           >
             <img
               src={img.src}
@@ -57,7 +79,7 @@ export default function MasonryGallery({ images, categories }: MasonryGalleryPro
       {selectedImage && (
         <div
           className="masonry-gallery__lightbox"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedIndex(null)}
         >
           <div
             className="masonry-gallery__lightbox-content"
@@ -65,7 +87,7 @@ export default function MasonryGallery({ images, categories }: MasonryGalleryPro
           >
             <button
               className="masonry-gallery__lightbox-close"
-              onClick={() => setSelectedImage(null)}
+              onClick={() => setSelectedIndex(null)}
               aria-label="Close"
             >
               ✕
@@ -74,6 +96,8 @@ export default function MasonryGallery({ images, categories }: MasonryGalleryPro
               src={selectedImage.src}
               alt={selectedImage.caption}
               className="masonry-gallery__lightbox-image"
+              onClick={showNextImage}
+              style={{ cursor: filteredImages.length > 1 ? 'pointer' : 'default' }}
             />
             <p className="masonry-gallery__lightbox-caption">
               {selectedImage.caption}

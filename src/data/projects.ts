@@ -1,114 +1,93 @@
+import type { Language } from '../i18n/translations';
+
 export interface ProcessStep {
   title: string;
   description: string;
   icon?: string;
 }
 
-export const projects = {
+export interface GalleryImage {
+  src?: string;
+  iframeUrl?: string;
+  iframeHeight?: number;
+  caption: string;
+  category?: string;
+}
+
+export interface CategorizedGalleryImage {
+  src: string;
+  caption: string;
+  category: string;
+}
+
+export interface GalleryWithCategories {
+  categories: string[];
+  images: CategorizedGalleryImage[];
+}
+
+export interface ProjectData {
+  id: string;
+  title: string;
+  category: string;
+  thumbnail: string;
+  color: string;
+  year: string;
+  overview: string;
+  role: string;
+  duration?: string;
+  team?: string;
+  client?: string;
+  tools: string[];
+  challenge?: string;
+  challengeDetails?: string[];
+  researchInsights?: string[];
+  process?: ProcessStep[];
+  solution?: string;
+  solutionDetails?: string[];
+  keyFeatures?: { title: string; description: string }[];
+  results?: string[];
+  testimonial?: { quote: string; author: string; role: string };
+  learnings?: string[];
+  gallery?: GalleryImage[];
+  galleryWithCategories?: GalleryWithCategories;
+  nextProject?: string;
+  hinweise?: string[];
+}
+
+export const projects: Record<Language, ProjectData[]> = {
   en: [
     {
       id: 'photoportfolio',
-      title: 'Digital Photography Course Portfolio',
+      title: 'Digital Photography Portfolio',
       category: 'Photography · Portfolio',
-      thumbnail: 'https://picsum.photos/seed/thumb-photo/800/520',
+      thumbnail: 'https://ik.imagekit.io/nhh7dpdil/meWithCam.jpg',
       color: '#FF6B35',
       year: '2024',
-      overview: 'A photography portfolio showcasing coursework from the Digital Photography program at {Hochschule}. This project demonstrates mastery of composition, lighting, and visual storytelling across multiple photographic genres.',
-      role: 'Qi Wang',
-      duration: '1 semester',
-      team: '1 Photographer · Instructor guidance',
-      client: '{Hochschule} — {Hochschule}',
-      tools: ['Camera', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio Website'],
-      challenge: 'Create a cohesive photography portfolio that demonstrates technical proficiency and artistic vision across diverse photographic disciplines while maintaining a consistent visual aesthetic.',
-      challengeDetails: [
-        'Master composition techniques across different genres (nature, animal, street photography)',
-        'Develop understanding of lighting, exposure, and color theory',
-        'Create a narrative through photographic series',
-        'Maintain consistent editing style and visual coherence',
-        'Effectively present work in a digital format',
-      ],
-      researchInsights: [
-        'Studied masters of photography in each genre to develop personal style',
-        'Explored composition techniques: rule of thirds, leading lines, depth of field',
-        'Analyzed color palettes and editing approaches in contemporary photography',
-        'Researched effective portfolio presentation methods for different audiences',
-        'Developed understanding of how context influences image interpretation',
-      ],
-      process: [
-        { title: 'Planning & Location Scouting', description: 'Research locations and plan shoots to capture diverse subjects and lighting conditions.', icon: '🗺️' },
-        { title: 'Shooting', description: 'Execute photography sessions with attention to composition, exposure, and visual storytelling.', icon: '📸' },
-        { title: 'Post-Processing', description: 'Edit images in Lightroom and Photoshop to enhance mood, color, and visual impact while maintaining authenticity.', icon: '🎨' },
-        { title: 'Curation', description: 'Select best images and organize them into thematic series that tell a cohesive story.', icon: '✨' },
-        { title: 'Presentation', description: 'Design portfolio layout and create engaging descriptions for each series.', icon: '🖼️' },
-      ],
-      solution: 'Qi Wang developed a distinctive photographic voice by deeply exploring three distinct genres. Each category demonstrates both technical mastery and artistic sensitivity, with careful attention to composition, lighting, and emotional impact.',
-      solutionDetails: [
-        'Nature Photography Series: Capturing landscapes with emphasis on light, color, and natural elements',
-        'Animal Photography: Documenting wildlife behavior and personality with respect and authenticity',
-        'Street Photography: Exploring human moments and urban environments with candid storytelling',
-        'Consistent editing approach: Warm color grading with emphasis on natural tones',
-        'Thoughtful organization: Images grouped by theme with contextual descriptions',
-      ],
-      keyFeatures: [
-        { title: 'Nature Collection', description: 'Landscape and nature photography exploring diverse environments, lighting conditions, and seasonal changes.' },
-        { title: 'Wildlife Series', description: 'Animal and nature photography capturing behavior, personality, and habitat with ethical approaches.' },
-        { title: 'Street Photography', description: 'Urban and street photography exploring human moments, composition, and visual narratives.' },
-        { title: 'Consistent Style', description: 'Unified editing approach and visual language across all series creating a cohesive portfolio.' },
-      ],
-      results: [
-        'Completed 30+ exhibition-quality photographs across three genres',
-        'Developed personal photographic style and visual voice',
-        'Mastered technical skills: exposure, composition, color grading',
-        'Created shareable portfolio suitable for exhibitions or freelance opportunities',
-        'Received positive feedback from instructors and peers',
-      ],
-      testimonial: {
-        quote: 'The growth from first shoot to final portfolio was remarkable. The technical skills are evident, but what impressed me most was the development of Qi Wang\'s artistic voice and creative vision.',
-        author: 'Photography Instructor',
-        role: '{Hochschule} Department of Digital Media',
-      },
-      learnings: [
-        'Vision and consistency matter more than equipment — develop your unique perspective',
-        'Post-processing is not cheating; it\'s part of the artistic expression and storytelling',
-        'Understanding light is fundamental to all photography — practice observation daily',
-      ],
+      overview: 'A personal photography portfolio focused on my hobby of working with light, proportion, composition, and visual storytelling across different photographic scenes.',
+      role: 'Photographer',
+      tools: ['Nikon D810', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio Website'],
       gallery: [],
       galleryWithCategories: {
-        categories: ['Nature Photography', 'Wildlife Photography', 'Street Photography'],
+        categories: ['natrue Photograhy', 'City Photograhy', 'Other Photograhy'],
         images: [
           // NATURE PHOTOGRAPHY
-          { src: 'https://picsum.photos/seed/nat1/800/600', caption: 'Mountain landscape at sunrise', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat2/600/800', caption: 'Forest path in autumn', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat3/800/800', caption: 'Remote mountain valley', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat4/900/600', caption: 'Golden hour over fields', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat5/800/800', caption: 'Desert sand dunes', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat6/600/800', caption: 'Coastal rock formations', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat7/1000/666', caption: 'Winter landscape with snow', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat8/800/800', caption: 'Sunset over ocean', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat9/800/900', caption: 'Misty forest morning', category: 'Nature Photography' },
-          { src: 'https://picsum.photos/seed/nat10/750/1000', caption: 'Alpine meadow in bloom', category: 'Nature Photography' },
-          // WILDLIFE PHOTOGRAPHY
-          { src: 'https://picsum.photos/seed/wild1/900/600', caption: 'Lion in savanna', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild2/600/900', caption: 'Eagle in flight', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild3/800/800', caption: 'Elephant herd', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild4/1000/600', caption: 'Deer in forest', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild5/700/900', caption: 'Fox in snow', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild6/900/600', caption: 'Bear at waterfall', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild7/600/900', caption: 'Penguin colony', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild8/800/800', caption: 'Monarch butterfly', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild9/800/900', caption: 'Polar bear', category: 'Wildlife Photography' },
-          { src: 'https://picsum.photos/seed/wild10/900/600', caption: 'Wolf howling', category: 'Wildlife Photography' },
-          // STREET PHOTOGRAPHY
-          { src: 'https://picsum.photos/seed/street1/1000/600', caption: 'City intersection', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street2/600/900', caption: 'Urban alley', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street3/900/600', caption: 'Market street scene', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street4/700/900', caption: 'People on stairs', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street5/900/600', caption: 'Shop window reflection', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street6/800/800', caption: 'Night street', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street7/700/900', caption: 'Pedestrian crossing', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street8/900/600', caption: 'Architecture detail', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street9/800/800', caption: 'Urban portrait', category: 'Street Photography' },
-          { src: 'https://picsum.photos/seed/street10/700/900', caption: 'City skyline moments', category: 'Street Photography' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/598087E8-21BE-4694-AF9D-456487F89F43_1_201_a.jpeg?updatedAt=1777962192334', caption: 'Mountain landscape with sheeps', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/1AD58839-81E4-4625-BB8A-FAC5FB25731F.jpeg?updatedAt=1777962192834', caption: 'Horse an the river', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8911.jpg?updatedAt=1777962191059', caption: 'golden plants on fields', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8915.JPG?updatedAt=1777962190611', caption: 'river view', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/F60001E8-EF0D-4D36-B834-3CE056920F0A_1_201_a.jpeg?updatedAt=1777962190166', caption: 'Reflection in the lake', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8923.JPG?updatedAt=1777962189571', caption: 'Apple tree in summer', category: 'natrue Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/BBGL2118.JPG?updatedAt=1777962187817', caption: 'winter landscape', category: 'natrue Photograhy' },
+
+          // CITY PHOTOGRAPHY
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/08EA4E16-5854-4872-817A-087654722C0E.jpeg?updatedAt=1777962139766', caption: 'light in Mueseum', category: 'City Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/FKDS0994.JPG?updatedAt=1777962138357', caption: 'Munich street', category: 'City Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/IMG_5409.JPG?updatedAt=1777962138312', caption: 'Beach in Barcelona ', category: 'City Photograhy' },
+          // OTHER PHOTOGRAPHY
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/19F20596-4900-483F-A4A9-BD448119ECBE_1_105_c.jpeg?updatedAt=1777962132743', caption: 'Design chair ', category: 'Other Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/3FE0850F-38E7-4306-83AA-C026CDA7AEC3.jpeg?updatedAt=1777962131896', caption: 'Fullmoon', category: 'Other Photograhy' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/_DSC9284.JPG?updatedAt=1777962138147', caption: 'self-drawn cup and shoppingbag ', category: 'Other Photograhy' },
+
         ],
       },
       nextProject: 'maiq',
@@ -420,107 +399,34 @@ export const projects = {
   de: [
     {
       id: 'photoportfolio',
-      title: 'Digitalfotografie-Kurs Portfolio',
+      title: 'Digitalfotografie Portfolio',
       category: 'Fotografie · Portfolio',
-      thumbnail: 'https://picsum.photos/seed/thumb-photo/800/520',
+      thumbnail: 'https://ik.imagekit.io/nhh7dpdil/meWithCam.jpg',
       color: '#FF6B35',
       year: '2024',
-      overview: 'Ein Fotografie-Portfolio, das Kursarbeiten aus dem Digitalfotografie-Programm der Technischen Hochschule Ingolstadt  präsentiert. Dieses Projekt demonstriert Meisterschaft in Komposition, Beleuchtung und visuelles Storytelling über mehrere fotografische Genres.',
-      role: 'Qi Wang',
-      duration: '1 Semester',
-      team: '1 Fotograf · Betreuung durch Dozenten',
-      client: '{Hochschule} — {Hochschule}',
-      tools: ['Kamera', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio-Website'],
-      challenge: 'Erstelle ein kohäsives Fotografie-Portfolio, das technische Kenntnisse und künstlerische Vision über verschiedene fotografische Disziplinen hinweg demonstriert, während eine konsistente visuelle Ästhetik beibehalten wird.',
-      challengeDetails: [
-        'Beherrschung von Kompositionstechniken über verschiedene Genres (Natur-, Tier-, Straßenfotografie)',
-        'Entwicklung von Verständnis für Beleuchtung, Belichtung und Farbtheorie',
-        'Schaffung einer Erzählung durch fotografische Serien',
-        'Beibehaltung eines konsistenten Bearbeitungsstils und visueller Kohärenz',
-        'Effektive Präsentation von Arbeiten in digitaler Form',
-      ],
-      researchInsights: [
-        'Studium von Fotografie-Meistern in jedem Genre, um persönlichen Stil zu entwickeln',
-        'Erforschung von Kompositionstechniken: Drittelregel, führende Linien, Schärfentiefe',
-        'Analyse von Farbpaletten und Bearbeitungsansätzen in zeitgenössischer Fotografie',
-        'Recherche über effektive Portfolio-Präsentationsmethoden für verschiedene Zielgruppen',
-        'Entwicklung von Verständnis, wie Kontext die Bildinterpretation beeinflusst',
-      ],
-      process: [
-        { title: 'Planung & Location-Scouting', description: 'Erforsche Orte und plane Shootings, um vielfältige Motive und Lichtverhältnisse einzufangen.', icon: '🗺️' },
-        { title: 'Fotografieren', description: 'Führe Fotografie-Sessions mit Aufmerksamkeit auf Komposition, Belichtung und visuelles Geschichtenerzählen durch.', icon: '📸' },
-        { title: 'Nachbearbeitung', description: 'Bearbeite Bilder in Lightroom und Photoshop, um Stimmung, Farbe und visuellen Impact zu verbessern, während Authentizität beibehalten wird.', icon: '🎨' },
-        { title: 'Auswahl', description: 'Wähle beste Bilder aus und organisiere sie in thematische Serien, die eine kohärente Geschichte erzählen.', icon: '✨' },
-        { title: 'Präsentation', description: 'Gestalte Portfolio-Layout und erstelle ansprechende Beschreibungen für jede Serie.', icon: '🖼️' },
-      ],
-      solution: 'Qi Wang entwickelte eine charakteristische fotografische Stimme durch tiefe Erforschung von drei verschiedenen Genres. Jede Kategorie demonstriert sowohl technische Meisterschaft als auch künstlerische Sensibilität mit sorgfältiger Aufmerksamkeit auf Komposition, Beleuchtung und emotionalen Impact.',
-      solutionDetails: [
-        'Naturfotografie-Serie: Erfassung von Landschaften mit Betonung auf Licht, Farbe und Naturelemente',
-        'Tierfotografie: Dokumentation von Wildtierverhalten und Persönlichkeit mit Respekt und Authentizität',
-        'Straßenfotografie: Erforschung von menschlichen Momenten und urbanen Umgebungen mit authentischem Geschichtenerzählen',
-        'Konsistenter Bearbeitungsansatz: Warme Farbgradeung mit Betonung auf natürliche Töne',
-        'Durchdachte Organisation: Bilder nach Thema gruppiert mit kontextuellen Beschreibungen',
-      ],
-      keyFeatures: [
-        { title: 'Naturkollektion', description: 'Landschafts- und Naturfotografie, die verschiedene Umgebungen, Lichtverhältnisse und Jahreszeiten erforscht.' },
-        { title: 'Tierfotografie-Serie', description: 'Tier- und Naturfotografie, die Verhalten, Persönlichkeit und Habitat mit ethischen Ansätzen erfasst.' },
-        { title: 'Straßenfotografie', description: 'Urban- und Straßenfotografie, die menschliche Momente, Komposition und visuelle Erzählungen erforscht.' },
-        { title: 'Konsistenter Stil', description: 'Einheitlicher Bearbeitungsansatz und visuelle Sprache über alle Serien hinweg, was ein kohäsives Portfolio erzeugt.' },
-      ],
-      results: [
-        'Fertigstellung von 30+ ausstellungsreifen Fotografien über drei Genres',
-        'Entwicklung persönlicher fotografischer Stimme und kreativer Vision',
-        'Beherrschung technischer Fähigkeiten: Belichtung, Komposition, Farbgradeung',
-        'Erstellung eines teilbaren Portfolios, das für Ausstellungen oder freiberufliche Gelegenheiten geeignet ist',
-        'Positive Rückmeldungen von Dozenten und Kommilitonen erhalten',
-      ],
-      testimonial: {
-        quote: 'Die Entwicklung vom ersten Shooting bis zum finalen Portfolio war bemerkenswert. Die technischen Fähigkeiten sind evident, aber was mich am meisten beeindruckte, war die Entwicklung von Qi Wangs künstlerischer Stimme und kreativer Vision.',
-        author: 'Fotografie-Dozent',
-        role: '{Hochschule} Abteilung für Digitale Medien',
-      },
-      learnings: [
-        'Vision und Konsistenz sind wichtiger als Ausrüstung — entwickle deine einzigartige Perspektive',
-        'Nachbearbeitung ist nicht Betrug; es ist Teil des künstlerischen Ausdrucks und Geschichtenerzählens',
-        'Das Verständnis von Licht ist fundamental für alle Fotografie — übe tägliche Beobachtung',
-      ],
+      overview: 'Ein persönliches Fotografie-Portfolio, das meine Freude an Licht, Proportion, Komposition und visuellem Storytelling in unterschiedlichen fotografischen Szenen zeigt.',
+      role: 'Fotograf',
+      tools: ['Nikon D810', 'Adobe Lightroom', 'Adobe Photoshop', 'Portfolio-Website'],
       gallery: [],
       galleryWithCategories: {
-        categories: ['Naturfotografie', 'Tierfotografie', 'Straßenfotografie'],
+        categories: ['Naturfotografie', 'Stadtfotografie', 'Sonstige Fotografie'],
         images: [
           // NATURFOTOGRAFIE
-          { src: 'https://picsum.photos/seed/nat1/800/600', caption: 'Berglandschaft bei Sonnenaufgang', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat2/600/800', caption: 'Waldpfad im Herbst', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat3/800/800', caption: 'Abgelegenes Bergtal', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat4/900/600', caption: 'Goldene Stunde über Feldern', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat5/800/800', caption: 'Wüstensanddünen', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat6/600/800', caption: 'Küstenfelsformationen', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat7/1000/666', caption: 'Winterlandschaft mit Schnee', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat8/800/800', caption: 'Sonnenuntergang über Ozean', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat9/800/900', caption: 'Nebelige Waldmorgen', category: 'Naturfotografie' },
-          { src: 'https://picsum.photos/seed/nat10/750/1000', caption: 'Alpinwiese in voller Blüte', category: 'Naturfotografie' },
-          // TIERFOTOGRAFIE
-          { src: 'https://picsum.photos/seed/wild1/900/600', caption: 'Löwe in der Savanne', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild2/600/900', caption: 'Adler im Flug', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild3/800/800', caption: 'Elefantenherde', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild4/1000/600', caption: 'Hirsch im Wald', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild5/700/900', caption: 'Fuchs im Schnee', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild6/900/600', caption: 'Bär am Wasserfall', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild7/600/900', caption: 'Pinguinkolonie', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild8/800/800', caption: 'Monarchfalter', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild9/800/900', caption: 'Eisbär', category: 'Tierfotografie' },
-          { src: 'https://picsum.photos/seed/wild10/900/600', caption: 'Heulender Wolf', category: 'Tierfotografie' },
-          // STRASSENFOTOGRAFIE
-          { src: 'https://picsum.photos/seed/street1/1000/600', caption: 'Stadtknotenpunkt', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street2/600/900', caption: 'Urbane Gasse', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street3/900/600', caption: 'Straßenmarkt-Szene', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street4/700/900', caption: 'Personen auf Treppen', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street5/900/600', caption: 'Schaufenster-Reflexion', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street6/800/800', caption: 'Nachtstraße', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street7/700/900', caption: 'Zebrastreifen-Übergang', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street8/900/600', caption: 'Architektur-Detail', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street9/800/800', caption: 'Urban-Porträt', category: 'Straßenfotografie' },
-          { src: 'https://picsum.photos/seed/street10/700/900', caption: 'Skyline-Momente', category: 'Straßenfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/598087E8-21BE-4694-AF9D-456487F89F43_1_201_a.jpeg?updatedAt=1777962192334', caption: 'Berglandschaft mit Schafen', category: 'Naturfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/1AD58839-81E4-4625-BB8A-FAC5FB25731F.jpeg?updatedAt=1777962192834', caption: 'Pferd am Fluss', category: 'Naturfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8911.jpg?updatedAt=1777962191059', caption: 'Goldene Pflanzen auf den Feldern', category: 'Naturfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8915.JPG?updatedAt=1777962190611', caption: 'Flussblick', category: 'Naturfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/F60001E8-EF0D-4D36-B834-3CE056920F0A_1_201_a.jpeg?updatedAt=1777962190166', caption: 'Spiegelung im See', category: 'Naturfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/_DSC8923.JPG?updatedAt=1777962189571', caption: 'Apfelbaum im Sommer', category: 'Naturfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/nature%20photos/BBGL2118.JPG?updatedAt=1777962187817', caption: 'Winterlandschaft', category: 'Naturfotografie' },
+          // STADTFOTOGRAFIE
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/08EA4E16-5854-4872-817A-087654722C0E.jpeg?updatedAt=1777962139766', caption: 'Licht im Museum', category: 'Stadtfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/FKDS0994.JPG?updatedAt=1777962138357', caption: 'Münchner Straße', category: 'Stadtfotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/IMG_5409.JPG?updatedAt=1777962138312', caption: 'Strand in Barcelona', category: 'Stadtfotografie' },
+          // SONSTIGE FOTOGRAFIE
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/19F20596-4900-483F-A4A9-BD448119ECBE_1_105_c.jpeg?updatedAt=1777962132743', caption: 'Designstuhl', category: 'Sonstige Fotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/3FE0850F-38E7-4306-83AA-C026CDA7AEC3.jpeg?updatedAt=1777962131896', caption: 'Vollmond', category: 'Sonstige Fotografie' },
+          { src: 'https://ik.imagekit.io/nhh7dpdil/Street%20photos/_DSC9284.JPG?updatedAt=1777962138147', caption: 'Selbst gezeichneter Becher und Einkaufstasche', category: 'Sonstige Fotografie' },
         ],
       },
       nextProject: 'maiq',
