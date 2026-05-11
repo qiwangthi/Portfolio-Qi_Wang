@@ -190,11 +190,6 @@ export const projects: Record<Language, ProjectData[]> = {
         'Stakeholders could communicate the product vision more clearly through the prototype',
         'The design showed that complex technical workflows can still feel intuitive',
       ],
-      testimonial: {
-        quote: 'Qi brings fresh perspectives, asks the right questions, and has already delivered strong initial designs that elevate our platform to the next level.',
-        author: 'Matthias Hartmann',
-        role: 'CEO of MAindTec GmbH',
-      },
       learnings: [
         'AI works best as a design partner when it accelerates iteration instead of replacing structure',
         'Qualitative interviews are essential for translating abstract workflow pain into concrete requirements',
@@ -561,11 +556,6 @@ export const projects: Record<Language, ProjectData[]> = {
         'Stakeholder konnten die Produktvision durch den Prototyp klarer kommunizieren',
         'Das Design zeigte, dass komplexe Workflows trotzdem intuitiv sein können',
       ],
-      testimonial: {
-        quote: 'Qi bringt frische Perspektiven, stellt die richtigen Fragen und hat bereits erste Designs geliefert, die unsere Plattform auf ein neues Level heben.',
-        author: 'Matthias Hartmann',
-        role: 'CEO of MAindTec GmbH',
-      },
       learnings: [
         'KI ist als Designpartner am stärksten, wenn sie Iterationen beschleunigt statt Struktur zu ersetzen',
         'Qualitative Interviews sind entscheidend, um abstrakte Workflow-Probleme in konkrete Anforderungen zu übersetzen',
