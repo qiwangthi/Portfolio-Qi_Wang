@@ -194,10 +194,10 @@ export default function ResumePage() {
     }, [content.title]);
 
     const handleDownload = () => {
-        const pdfUrl = 'https://ik.imagekit.io/nhh7dpdil/Qi_Wang_Resume_Mar..pdf';
+        const pdfUrl = 'https://ik.imagekit.io/nhh7dpdil/Qi_Wang.pdf';
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = 'Qi_Wang_Resume_Mar.pdf';
+        link.download = 'Qi_Wang.pdf';
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         document.body.appendChild(link);
