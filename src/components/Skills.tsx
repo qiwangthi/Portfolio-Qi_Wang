@@ -13,10 +13,11 @@ const skillIconUrls: Record<string, string[]> = {
   ],
   'interaction design': [
     'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/Figma%20Icon.png?updatedAt=1777994765263',
-    'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/gemini%20icoon.png?updatedAt=1777994765313',
+    'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/GoogleLabsIcon.png',
   ],
   prototyping: [
     'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/Figma%20Icon.png?updatedAt=1777994765263',
+    'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/GoogleLabsIcon.png',
   ],
   'vibe coding': [
     'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/gemini%20icoon.png?updatedAt=1777994765313',
@@ -60,6 +61,7 @@ const iconTooltips: Record<string, string> = {
   'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/Copilot%20icon.png': 'GitHub Copilot',
   'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/VSC%20icon.png': 'Visual Studio Code',
   'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/github%20icon.png': 'GitHub',
+  'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/GoogleLabsIcon.png': 'Google Stitch',
   'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/After%20Effect%20Icon.png?updatedAt=1777994765313': 'Adobe After Effects',
   'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/Adobe_Photoshop_Lightroom_CC_logo.svg%201.png?updatedAt=1777994765268': 'Adobe Lightroom',
   'https://ik.imagekit.io/nhh7dpdil/Tool%20Icons/Indesign%20icon.png?updatedAt=1777994765318': 'Adobe InDesign',
